@@ -1,0 +1,13 @@
+{
+  "name": "7.18__vue-blog",
+  "version": "1.0.0",
+  "description": "SEO Nuxt  vue的ssr框架\r SPA 单页面 只有一个挂载点，其他的都是vue编译成的js.",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nuxt",
+    "server":"cross-env NODE_ENV=development nodemon server/index.js --watch server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
