@@ -8,6 +8,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const config = require('../nuxt.config.js')
+const requireAll = require('require-all');
+
+const routes = requireAll({
+  dirname: path.join(__dirname, './routes/'),
+  filter: /(.+)\.route\.js$/
+})
+console.log(routes);
+for(const router of Object.values(routes)) {
+  console.log(router);
+  app.use('/api',router); //在后端启动了一个路由 以/api开头
+}
+
 const start = async() => {
   const nuxt = new Nuxt(config);
   if(true) {  //如果是开发阶段，实时编译

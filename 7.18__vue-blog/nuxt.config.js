@@ -4,4 +4,10 @@
 // process.env.DOMAIN = globalConfig.app.domain
 
 module.exports = {
+  plugins: [
+    {
+      src: '~/plugins/components',
+      ssr: true
+    }
+  ]
 }
